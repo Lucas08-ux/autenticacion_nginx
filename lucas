@@ -7,7 +7,7 @@ server {
 
     location / {
         satisfy all;
-        allow 192.168.57.1/24;
+        allow 192.168.57.0/24;
         allow 127.0.0.1;
         deny all;
         
