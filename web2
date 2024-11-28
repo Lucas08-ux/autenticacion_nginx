@@ -4,7 +4,10 @@ server {
 	root /var/www/web2/html;
 	index index.html index.htm index.nginx-debian.html;
 	server_name web2;
+
 	location / {
-		try_files $uri $uri/ =404;
-	}
+        deny 192.168.57.1/24;
+        allow all;
+        try_files $uri $uri/ =404;
+    }
 }
